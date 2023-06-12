@@ -21,7 +21,7 @@ const Menu = () => {
           <Link to="/profile">Profile</Link>
         </li> */}
         {routes.map(({ to, text }) => (
-          <li>
+          <li key={to}>
             <NavLink
               to={to}
               //className={({ isActive }) => ''}
