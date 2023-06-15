@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 export const blogData = [
-  { title: '¿Qué es Gribu?', slug: 'tibu-gribu', content: 'un tiburon pequeño y chistoso', author: 'primezil' },
+  { title: '¿Qué es Gribu?', slug: 'tibu-gribu', content: 'un tiburon pequeño y chistoso', author: 'krebs' },
   { title: '¿Qué es Tibu?', slug: 'tibu-tibu', content: 'un tiburon pequeño y chistoso', author: 'primezil' },
   { title: '¿Qué es Gibu?', slug: 'tibu-gibu', content: 'un tiburon pequeño y chistoso', author: 'primezil' }
 ];
@@ -19,6 +19,7 @@ const Blog = () => {
   return (
     <>
       <h1>Blog</h1>
+      <Outlet />
       <ul>
         {blogData.map((post) => (
           <BlogLink key={post.title} post={post}/>

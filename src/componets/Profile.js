@@ -1,8 +1,15 @@
 import React from 'react';
+import useAuth from '../hooks/useAuth';
 
 const Profile = () => {
+  const { user } = useAuth();
+
   return (
-    <p>Profile</p>
+    <>
+      <h1>Profile</h1>
+      <p>{`Username: ${user.name}`}</p>
+      <p>{user.isAdmin ? 'Admin' : 'User'}</p>
+    </>
   );
 }
 
